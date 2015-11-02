@@ -214,11 +214,32 @@ def remove(pattern, n_string):
     # test(remove("eggs", "bicycle"), "bicycle")
 
     f_pos = n_string.find(pattern)  # Find the first position of the occurrence
+    l_pattern = len(pattern)        # Length of pattern
+    l_string = len(n_string)        # Length of string
     if f_pos == -1:                 # Didn't find the pattern, return with the word
         return n_string
     new_str = ""
+    count = 0
+    while count < l_string:         # do this until the end of the string
+        if count == f_pos:          # if we have reached the pattern then
+            count += l_pattern      # Increment the counter forward the length of the pattern.
+        new_str += n_string[count]  # add the new letter to the string.
+        count += 1
+    return new_str
 
+def remove_all(pattern, n_string):
+    """
+    13. Write a function that removes all occurrences of a string from another string:
 
+        test(remove_all("an", "banana"), "ba")
+        test(remove_all("cyc", "bicycle"), "bile")
+        test(remove_all("iss", "Mississippi"), "Mippi")
+        test(remove_all("eggs", "bicycle"), "bicycle")
+    """
+    n_count = count_sub(pattern, n_string)
+    new_str = remove(pattern, n_string)
+    for count in range(n_count-1):
+        new_str = remove(pattern, new_str)
     return new_str
 
 
@@ -276,9 +297,17 @@ def test_suite():
     # 12. Tests
     print("\nTests for Exercise 12")
     test(remove("an", "banana"), "bana")
+    test(remove("an", "bana"), "ba")
     test(remove("cyc", "bicycle"), "bile")
     test(remove("iss", "Mississippi"), "Missippi")
     test(remove("eggs", "bicycle"), "bicycle")
+
+    # 13. Tests
+    print("\nTests for Exercise 13")
+    test(remove_all("an", "banana"), "ba")
+    test(remove_all("cyc", "bicycle"), "bile")
+    test(remove_all("iss", "Mississippi"), "Mippi")
+    test(remove_all("eggs", "bicycle"), "bicycle")
 
 ### # ------------------- MAIN ------------------- ###
 
