@@ -2,17 +2,17 @@
 Python3 notes and exercises from the book How to Think Like a Computer Scientist Python 3 (RLE)
 it can be found: http://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3/index.html
 
-# Chapters Completed
-* ~~Chapter 1 The way of the program~~
-* ~~Chapter 2 Variables, expressions, and statements~~
-* ~~Chapter 3 Hello, little turtles!~~
-* ~~Chapter 4 Functions~~
-* ~~Chapter 5 Conditionals~~
-* ~~Chapter 6 Fruitful functions~~
-* ~~Chapter 7 Iteration~~
-* ~~Chapter 8 Strings~~
-* ~~Chapter 9 Tuples~~
-* ~~Chapter 10 Event handling~~
+## Chapters Completed
+* ~~Chapter 1 The way of the program~~ 26 Oct 2015
+* ~~Chapter 2 Variables, expressions, and statements~~ 26 Oct 2015
+* ~~Chapter 3 Hello, little turtles!~~ 26 Oct 2015
+* ~~Chapter 4 Functions~~ 27 Oct 2015
+* ~~Chapter 5 Conditionals~~ 28 Oct 2015
+* ~~Chapter 6 Fruitful functions~~ 29 Oct 2015
+* ~~Chapter 7 Iteration~~ 30 Oct 2015
+* ~~Chapter 8 Strings~~ 02 Nov 2015
+* ~~Chapter 9 Tuples~~ 02 Nov 2015
+* ~~Chapter 10 Event handling~~ 02 Nov 2015
 * Chapter 11 Lists
 * Chapter 12 Modules
 * Chapter 13 Files
