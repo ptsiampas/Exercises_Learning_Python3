@@ -19,9 +19,9 @@ green_on = "#00FF00"
 green = turtle.Turtle()
 green.fillcolor(green_on)
 red = turtle.Turtle()
-red.fillcolor("darkred")
+red.fillcolor(red_off)
 orange = turtle.Turtle()
-orange.fillcolor("darkorange")
+orange.fillcolor(orange_off)
 border = turtle.Turtle()
 
 def draw_housing():
