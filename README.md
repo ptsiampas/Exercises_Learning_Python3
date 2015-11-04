@@ -13,7 +13,7 @@ it can be found: http://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3/in
 * ~~Chapter 8 Strings~~ 02 Nov 2015
 * ~~Chapter 9 Tuples~~ 02 Nov 2015
 * ~~Chapter 10 Event handling~~ 02 Nov 2015
-* Chapter 11 Lists
+* ~~Chapter 11 Lists~~ 04 Nov 2015
 * Chapter 12 Modules
 * Chapter 13 Files
 * Chapter 14 List Algorithms
