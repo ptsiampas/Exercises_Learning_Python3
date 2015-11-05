@@ -11,12 +11,3 @@ def test(actual, expected):
         msg = ("Test on line {0} failed. Expected '{1}', but got '{2}'."
                 .format(linenum, expected, actual))
     print(msg)
-
-def test_suite():
-    """ Run the suite of tests for code in this module (this file).
-    """
-
-
-
-
-test_suite()
