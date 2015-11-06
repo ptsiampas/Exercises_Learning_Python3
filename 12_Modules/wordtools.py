@@ -47,6 +47,11 @@ def wordset(sentence):
 
 
 def longestword(sentence):
+    """
+    Finds the longest word and returns the length of that word
+    :param sentence: array of words to search through
+    :return: length of the largest word
+    """
     lword = 0
 
     for word in sentence:

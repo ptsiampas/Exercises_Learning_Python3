@@ -10,5 +10,5 @@ def retrieve_page(url):
     my_socket.close()
     return dta
 
-the_text = retrieve_page("https://tools.ietf.org/html/rfc793")
+the_text = retrieve_page("https://tools.ietf.org/html/rfc793.txt")
 print(the_text)
