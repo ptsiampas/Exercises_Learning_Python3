@@ -15,7 +15,7 @@ it can be found: http://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3/in
 * ~~Chapter 10 Event handling~~ 02 Nov 2015
 * ~~Chapter 11 Lists~~ 04 Nov 2015
 * ~~Chapter 12 Modules~~ 06 Nov 2015
-* Chapter 13 Files
+* ~~Chapter 13 Files~~ 07 Nov 2015
 * Chapter 14 List Algorithms
 * Chapter 15 Classes and Objects - the Basics
 * Chapter 16 Classes and Objects - Digging a little deeper
