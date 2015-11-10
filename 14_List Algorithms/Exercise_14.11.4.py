@@ -18,23 +18,16 @@
 #     (e) Now adapt the queens program so it won’t list solutions that are in the same family.
 #     It only prints solutions from unique families.
 from queens_functions import *
+from unit_tester import test
+
+def mirror_x(bd):
+    return
+
+def mirror_y(bd):
+    return
+
+def rot_90(bd):
+    return
 
 
-def main():
-    import random
-    rng = random.Random()  # Instantiate a generator
-    solutions = []
-    bd = list(range(8))  # Generate the initial permutation
-    num_found = 0
-    tries = 0
-    while num_found < 90:
-        rng.shuffle(bd)
-        tries += 1
-        if not has_clashes(bd):
-            if bd not in solutions:
-                print("Found solution {0} in {1} tries.".format(bd, tries))
-                tries = 0
-                solutions.append(bd[:])
-                num_found += 1
 
-main()
