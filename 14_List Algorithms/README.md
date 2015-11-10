@@ -34,19 +34,19 @@ into the result, which we return.
    algorithm uses a pattern that can be reused in other situations. Adapt the merge algorithm to write each of 
    these functions, as was suggested there:
    
-     a. *done* ~~Return only those items that are present in both lists.~~
+     a. *[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.1a.py)* Return only those items that are present in both lists.
      
-     b. *done* ~~Return only those items that are present in the first list, but not in the second.~~
+     b. *[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.1b.py)* Return only those items that are present in the first list, but not in the second.
      
-     c. *done* ~~Return only those items that are present in the second list, but not in the first.~~
+     c. *[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.1c.py)* Return only those items that are present in the second list, but not in the first.
      
-     d. *done* ~~Return items that are present in either the first or the second list.~~
+     d. *[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.1d.py)* Return items that are present in either the first or the second list.
      
-     f. *done* Return items from the first list that are not eliminated by a matching element in the second list. In this 
+     f. *[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.1e.py)* Return items from the first list that are not eliminated by a matching element in the second list. In this 
        case, an item in the second list “knocks out” just one matching item in the first list. This operation is 
        sometimes called `bagdiff`. For example `bagdiff([5,7,11,11,11,12,13], [7,8,11])` would return `[5,11,11,12,13]`
 
-2. Modify the queens program to solve some boards of size 4, 12, and 16. What is the maximum size puzzle you can 
+2. *[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.2.py)* Modify the queens program to solve some boards of size 4, 12, and 16. What is the maximum size puzzle you can 
 usually solve in under a minute?
 
 3. Adapt the queens program so that we keep a list of solutions that have already printed, so that we don’t print 
