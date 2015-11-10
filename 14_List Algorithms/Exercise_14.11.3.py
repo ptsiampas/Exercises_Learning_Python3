@@ -7,7 +7,7 @@ def main():
     import random
     rng = random.Random()  # Instantiate a generator
     solutions = []
-    bd = list(range(4))  # Generate the initial permutation
+    bd = list(range(8))  # Generate the initial permutation
     num_found = 0
     tries = 0
     while num_found < 5:
