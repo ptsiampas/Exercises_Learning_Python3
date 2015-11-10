@@ -3,13 +3,13 @@ http://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3/list_algorithms.htm
 
 ## Notes
 
-_Linear Search_(example 14.2)
+_Linear Search_ ([Example 14.2](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Example_14.2.py))
 
 Searching all items of a sequence from first to last is called a *linear search*. Each time we check whether 
 `item == target` we’ll call it a *probe*. We like to count probes as a measure of how efficient our algorithm is, 
 and this will be a good enough indication of how long our algorithm will take to execute.
 
-_Binary Search_(Example 14.4)
+_Binary Search_ ([Example 14.4](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Example_14.4.py))
 
 Binary search gets its name from the fact that each probe splits the list into two pieces 
 and discards the one half from the region of interest.
@@ -30,3 +30,21 @@ into the result, which we return.
 
 ## Exercises Completed
 #### 14.11. Exercises
+1. The section in this chapter called Alice in Wonderland, again! started with the observation that the merge 
+   algorithm uses a pattern that can be reused in other situations. Adapt the merge algorithm to write each of 
+   these functions, as was suggested there:
+   
+    a. *done* ~~Return only those items that are present in both lists.~~
+    b. *done* ~~Return only those items that are present in the first list, but not in the second.~~
+    c. *done* ~~Return only those items that are present in the second list, but not in the first.~~
+    d. *done* ~~Return items that are present in either the first or the second list.~~
+    f. *done* Return items from the first list that are not eliminated by a matching element in the second list. In this 
+       case, an item in the second list “knocks out” just one matching item in the first list. This operation is 
+       sometimes called `bagdiff`. For example `bagdiff([5,7,11,11,11,12,13], [7,8,11])` would return `[5,11,11,12,13]`
+
+2. Modify the queens program to solve some boards of size 4, 12, and 16. What is the maximum size puzzle you can 
+usually solve in under a minute?
+
+3. Adapt the queens program so that we keep a list of solutions that have already printed, so that we don’t print 
+the same solution more than once.
+
