@@ -44,7 +44,7 @@ def mirror_y(bd):
 
 def rot_90(bd):
     # Transpose the array first
-    transposed = bd.copy()
+    transposed = bd[:]
     for x in range(len(bd)):
         y = bd[x]
         transposed[y] = x
@@ -70,7 +70,7 @@ def remove_dups(seq):
 
 def generate_sym(bd):
     result = []
-    result.append(bd.copy())
+    result.append(bd[:])
     result.append(rot_270(bd))
     result.append(rot_180(bd))
     result.append(rot_90(bd))

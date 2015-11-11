@@ -18,19 +18,20 @@ def main():
     bd = list(range(8))  # Generate the initial permutation
     num_found = 0
     tries = 0
-    #n = 8
-    #cols = range(n)
-    while num_found < 5:
-        rng.shuffle(bd)
+    n = 8
+    cols = range(n)
+    for bd in permutations(cols):
+    # while num_found < 1:
+    #     rng.shuffle(bd)
         tries += 1
         if not has_clashes(bd):
-            if bd not in solutions:
+            if list(bd) not in solutions:
                 print("Found unique solution {0} in {1} tries.".format(bd, tries))
                 tries = 0
-                solutions.extend(generate_sym(bd))
-                print(solutions)
+                solutions.extend(generate_sym(list(bd)))
+                # print(solutions)
                 num_found += 1
-    print(len(solutions))
-
+    # print(len(solutions))
+    print(num_found)
 
 main()
