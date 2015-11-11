@@ -3,6 +3,10 @@
 from queens_functions import *
 
 
+def board(vec):
+    print("\n".join('.' * i + 'Q' + '.' * (n - i - 1) for i in vec) + "\n===\n")
+
+
 def main():
     import random
     rng = random.Random()  # Instantiate a generator
@@ -16,8 +20,10 @@ def main():
         if not has_clashes(bd):
             if bd not in solutions:
                 print("Found solution {0} in {1} tries.".format(bd, tries))
+                board(bd)
                 tries = 0
                 solutions.append(bd[:])
                 num_found += 1
+
 
 main()

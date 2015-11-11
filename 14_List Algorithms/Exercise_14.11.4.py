@@ -17,17 +17,83 @@
 #           [7,3,0,2,5,1,6,4],[5,2,4,6,0,3,1,7]]
 #     (e) Now adapt the queens program so it won’t list solutions that are in the same family.
 #     It only prints solutions from unique families.
-from queens_functions import *
 from unit_tester import test
 
+
 def mirror_x(bd):
-    return
+    m_size = len(bd) - 1
+    result = []
+    for pos in range(m_size + 1):
+        result.append(m_size - bd[pos])
+    return result
+
 
 def mirror_y(bd):
-    return
+    # alternate way of reversing the list is to do:
+    # return bd[::-1]
+    bd.reverse()
+    return bd
+
 
 def rot_90(bd):
-    return
+    # Transpose the array first
+    transposed = bd.copy()
+    for x in range(len(bd)):
+        y = bd[x]
+        transposed[y] = x
+
+    # Mirror it on Y axis
+    return mirror_y(transposed)
 
 
+def rot_180(bd):
+    return rot_90(rot_90(bd))
 
+
+def rot_270(bd):
+    return rot_180(rot_90(bd))
+
+
+def remove_dups(seq):
+    # order preserving
+    noDupes = []
+    [noDupes.append(i) for i in seq if not noDupes.count(i)]
+    return noDupes
+
+
+def generate_sym(bd):
+    result = []
+    syms_generated = []
+    result.append(bd.copy())
+    result.append(rot_270(bd))
+    result.append(rot_180(bd))
+    result.append(rot_90(bd))
+    result.append(rot_90(mirror_x(bd)))
+    result.append(mirror_y(bd))
+    result.append(mirror_x(bd))
+    result.append(mirror_y(mirror_x(bd)))
+    result.append(rot_180(mirror_x(bd)))
+    result.append(rot_270(mirror_x(bd)))
+    result.append(mirror_x(mirror_y(bd)))
+    result.append(rot_90(mirror_y(bd)))
+    result.append(rot_180(mirror_y(bd)))
+    result.append(rot_270(mirror_y(bd)))
+    syms_generated.extend(remove_dups(result))
+    return syms_generated
+
+
+# Solution:
+# [SOL=[0,4,7,5,2,6,1,3], R270[7,1,3,0,6,4,2,5],
+# R180[4,6,1,5,2,0,3,7],R90=[2,5,3,1,7,4,6,0],
+# MY[3,1,6,2,5,7,4,0],R90(MX)[0,6,4,7,1,3,5,2],
+# MX[7,3,0,2,5,1,6,4],R270(MX)[5,2,4,6,0,3,1,7]]
+
+board = [5, 7, 1, 3, 0, 6, 4, 2]
+
+# test(rot_90(board), [2, 5, 3, 1, 7, 4, 6, 0])
+# test(rot_180(board), [4, 6, 1, 5, 2, 0, 3, 7])
+# test(rot_270(board), [7, 1, 3, 0, 6, 4, 2, 5])
+# test(mirror_x(board), [7, 3, 0, 2, 5, 1, 6, 4])
+# test(mirror_y(board), [3, 1, 6, 2, 5, 7, 4, 0])
+
+print(generate_sym(board))
