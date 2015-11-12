@@ -52,7 +52,7 @@ usually solve in under a minute?
 3. *[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.3.py)* Adapt the queens program so that we keep a list of solutions that have already printed, so that we don’t print 
 the same solution more than once.
 
-4. *[current](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.4.py)* Chess boards are symmetric: if we have a solution to the queens problem, its mirror solution — either flipping the 
+4. *[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.4.py)* Chess boards are symmetric: if we have a solution to the queens problem, its mirror solution — either flipping the 
 board on the X or in the Y axis, is also a solution. And giving the board a 90 degree, 180 degree, or 270 degree 
 rotation is also a solution. In some sense, solutions that are just mirror images or rotations of other 
 solutions — in the same family — are less interesting than the unique “core cases”. Of the 92 solutions for
@@ -73,5 +73,30 @@ Wikipedia has some fascinating stuff about this.
           [3,1,6,2,5,7,4,0],[0,6,4,7,1,3,5,2],
           [7,3,0,2,5,1,6,4],[5,2,4,6,0,3,1,7]]
         ```
-    (e) Now adapt the queens program so it won’t list solutions that are in the same family.
-   It only prints solutions from unique families.
+    (e) [done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/queens_puzzle.py) Now adapt the queens program so it won’t list solutions that are in the same family.
+   It only prints solutions from unique families. 
+   _didn't like the random shuffling, it just took too long, so found a module called permutations to go through everything._
+   
+5. *[current](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/14_List%20Algorithms/Exercise_14.11.5.py)* Every week a computer scientist buys four lotto tickets. She always chooses the same prime numbers, with the hope that if she ever hits the jackpot, she will be able to go onto TV and Facebook and tell everyone her secret. This will suddenly create widespread public interest in prime numbers, and will be the trigger event that ushers in a new age of enlightenment. She represents her weekly tickets in Python as a list of lists:
+  ```
+  my_tickets = [ [ 7, 17, 37, 19, 23, 43],
+                 [ 7,  2, 13, 41, 31, 43],
+                 [ 2,  5,  7, 11, 13, 17],
+                 [13, 17, 37, 19, 23, 43] ]
+  ```
+  **Complete these exercises.**
+  a. Each lotto draw takes six random balls, numbered from 1 to 49. Write a function to return a lotto draw.
+  b. Write a function that compares a single ticket and a draw, and returns the number of correct picks on that ticket:
+  ``test(lotto_match([42,4,7,11,1,13], [2,5,7,11,13,17]), 3)``
+  c. Write a function that takes a list of tickets and a draw, and returns a list telling how many picks were correct on each ticket:
+  ``test(lotto_matches([42,4,7,11,1,13], my_tickets), [1,2,3,1])``
+  d. Write a function that takes a list of integers, and returns the number of primes in the list:
+  ``test(primes_in([42, 4, 7, 11, 1, 13]), 3)``
+  e. Write a function to discover whether the computer scientist has missed any prime numbers in her selection of the four tickets. Return a list of all primes that she has missed:
+  ``test(prime_misses(my_tickets), [3, 29, 47])``
+  f. Write a function that repeatedly makes a new draw, and compares the draw to the four tickets.
+    - Count how many draws are needed until one of the computer scientist’s tickets has at least 3 correct picks. Try the experiment twenty times, and average out the number of draws needed.
+    - How many draws are needed, on average, before she gets at least 4 picks correct?
+    - How many draws are needed, on average, before she gets at least 5 correct? (Hint: this might take a while. It would be nice if you could print some dots, like a progress bar, to show when each of the 20 experiments has completed.)
+  
+  _Notice that we have difficulty constructing test cases here, because our random numbers are not deterministic. Automated testing only really works if you already know what the answer should be!_
