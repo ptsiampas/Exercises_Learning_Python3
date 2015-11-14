@@ -15,7 +15,7 @@ r = Rectangle(Point(0, 0), 10, 5)
 
 test(r.perimeter(), 30)
 ```
-3. **[done]https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/16_Classes_and_Objects_Diggin_a_Little_Deeper/Exercise_16_6_3.py)** Write a flip method in the Rectangle class that swaps the width and the height of any
+3. **[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/16_Classes_and_Objects_Diggin_a_Little_Deeper/Exercise_16_6_3.py)** Write a flip method in the Rectangle class that swaps the width and the height of any
 rectangle instance:
 ```
 r = Rectangle(Point(100, 50), 10, 5)
