@@ -53,14 +53,36 @@ class Point:
         b = self.y - (m * self.x)
         return (m, b)
 
-    def find_circle_centre(self, pt2, pt3, pt4):
-        # Find the mid point between the two sets.
-        mid1 = self.halfway(pt2)
-        mid2 = Point(pt3).halfway(pt4)
+    def find_circle_centre(self, pt2, pt3, pt4):        # TODO: find_circle_center not working.
+        # Ref: http://www.regentsprep.org/regents/math/geometry/gcg6/RCir.htm
+        # (x - h)^2 + (y - k)^2 = r^2
+        # (h, k) = Centre of the circle.
+        #
+        # Search: how to find the center of a circle with 3 points
+        # Find the Slope for the two lines.
+        mr = (self.y - pt2.y) / (self.x - pt2.x)
+        mt = (pt3.y - pt4.y) / (pt3.x - pt4.x)
 
-        return mid1
+        # Find the mid point between the two lines r and t.
+        mrx = (self.x + pt2.x) / 2
+        mry = (self.y + pt2.y) / 2
+        mtx = (pt3.y + pt4.y) / 2
+        mty = (pt3.y + pt4.y) / 2
+
+        # Solve for y
+        y = 5
+
+        # Solve for x
+        x = (mr * mt)
+        return (x, mr, mt, mrx, mry, mtx, mty)
 
 
 # Main part
+pt1 = Point(5, 5)
+pt2 = Point(6, -2)
+pt3 = Point(6, -2)
+pt4 = Point(2, -4)
 
-test(Point(5, 5).find_circle_centre(Point(6, -2), Point(6, -2), Point(2, -4)), (2, 1))
+# test(Point(5, 5).find_circle_centre(Point(6, -2), Point(6, -2), Point(2, -4)), (2, 1))
+print(pt1.find_circle_centre(pt2, pt3, pt4))
+print(Point(5, 5).halfway(Point(6, -2)))
