@@ -25,28 +25,27 @@ two Points as parameters instead of four numbers.
 the x-axis. For example, Point(3, 5).reflect_x() is (3,-5)
 3. **[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/15._Classes%20and%20Objects_Basics/Exercise_15.12.3.py)**Add a method slope_from_origin which returns the slope of the line joining the
 origin to the point. For example,
-```python
->>> Point(4, 10).slope_from_origin()
-2.5
-```
-What cases will cause your method to fail? _When a zero is given for any of the points._
-
+    ```python
+    >>> Point(4, 10).slope_from_origin()
+    2.5
+    ```
+  What cases will cause your method to fail? _When a zero is given for any of the points._
 4. **[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/15._Classes%20and%20Objects_Basics/Exercise_15.12.4.py)** The equation of a straight line is “y = ax + b”, (or perhaps “y = mx + c”). The coefficients
 a and b completely describe the line. Write a method in the Point class so that if a point
 instance is given another point, it will compute the equation of the straight line joining
 the two points. It must return the two coefficients as a tuple of two values. For example,
-```python
->>> print(Point(4, 11).get_line_to(Point(6, 15)))
->>> (2, 3)
-```
-This tells us that the equation of the line joining the two points is “y = 2x + 3”. When
-will your method fail? _When it isn't given a target point to calculate_
+    ```python
+    >>> print(Point(4, 11).get_line_to(Point(6, 15)))
+    >>> (2, 3)
+    ```
+    This tells us that the equation of the line joining the two points is “y = 2x + 3”. When
+    will your method fail? _When it isn't given a target point to calculate_
 
 5. **[Un-finished](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/15._Classes%20and%20Objects_Basics/Exercise_15.12.5.py)** Given four points that fall on the circumference of a circle, find the midpoint of the circle.
-When will you function fail?
-**Hint:** You must know how to solve the geometry problem before you think of going
-anywhere near programming. You cannot program a solution to a problem if you don’t
-understand what you want the computer to do!
+    When will you function fail?
+    **Hint:** You must know how to solve the geometry problem before you think of going
+    anywhere near programming. You cannot program a solution to a problem if you don’t
+    understand what you want the computer to do!
 
 6. **[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/15._Classes%20and%20Objects_Basics/Exercise_15.12.6.py)** Create a new class, SMS_store. The class will instantiate SMS_store objects, like your
 inbox or your outbox on your cellphone:
