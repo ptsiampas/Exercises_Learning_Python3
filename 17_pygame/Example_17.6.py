@@ -1,6 +1,6 @@
 import pygame
 
-gravity = 0.01
+gravity = 0.1
 
 
 class QueenSprite:
@@ -70,15 +70,17 @@ class DukeSprite:
             self.anim_frame_count = 5
 
     def printxy(self):
-        print("Sprite[{2}] (x,y) & Target ():({0}), {1}".format(self.posn, self.target_posn, self.col_number))
+        print("Target({0})".format(self.posn))
 
     def contains_point(self, pt):
         # Use code from QueenSprite here
         """ Return True if my sprite rectangle contains point pt """
         (my_x, my_y) = self.posn
-        my_width = self.image.get_width()
+        # my_width = self.image.get_width()
+        my_width = 50
         my_height = self.image.get_height()
         (x, y) = pt
+        # print("width={0}, height={1}".format(my_width, my_height))
         return (x >= my_x and x < my_x + my_width and
                 y >= my_y and y < my_y + my_height)
 
