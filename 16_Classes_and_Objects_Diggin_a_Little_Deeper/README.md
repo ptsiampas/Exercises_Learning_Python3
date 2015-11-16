@@ -1,5 +1,5 @@
 # Chapter 16
-
+http://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3/classes_and_objects_II.html
 
 ## Exercises 16.6
 1. **[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/16_Classes_and_Objects_Diggin_a_Little_Deeper/Exercise_16_6_1.py)** Add a method area to the Rectangle class that returns the area of any instance:
