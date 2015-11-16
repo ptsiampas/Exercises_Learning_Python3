@@ -134,11 +134,79 @@ class Rectangle:
         return (self.corner.x <= float(pt.x) < self.width) \
                and (self.corner.y <= float(pt.y) < self.height)
 
+    def collision(a, b):
+        """
+        Found solution here: https://youtu.be/8b_reDI7iPM
+        :param b: object to compare
+        :return: True if they collide
+        """
+        # result = (a.corner.x + a.width) >= b.corner.x and \
+        #                 a.corner.x <= (b.corner.x + b.width) and \
+        #                 (a.corner.y + a.height) >= b.corner.y and \
+        #                 a.corner.y <= (b.corner.y + b.height)
+        Ax = a.corner.x
+        Ay = a.corner.y
+        AXW = a.corner.x + a.width
+        AYH = a.corner.y + a.height
 
-r = Rectangle(Point(), 10, 5)
-test(r.contains(Point(0, 0)), True)
-test(r.contains(Point(3, 3)), True)
-test(r.contains(Point(3, 7)), False)
-test(r.contains(Point(3, 5)), False)
-test(r.contains(Point(3, 4.99999)), True)
-test(r.contains(Point(-3, -3)), False)
+        Bx = b.corner.x
+        By = b.corner.y
+        BXW = b.corner.x + b.width
+        BYH = b.corner.y + b.height
+
+        result = (AXW >= Bx) and (Ax <= BXW) and (AYH >= By) and (Ay <= BYH)
+        return result
+
+
+#### Test 1 #####
+#  0 1 2 3 4 5 6 7 8 9
+# 0. . . . . . . . . .
+# 1. . . . . . . . . .
+# 2. . . . . . . . . .
+# 3. . . b - - - - - +
+# 4a - - | - +       |
+# 5|     |   |       |
+# 6|     + - - - - - +
+# 7+ - - - - + . . . .
+a = Rectangle(Point(0, 4), 5, 3)
+b = Rectangle(Point(3, 3), 5, 3)
+test(a.collision(b), True)
+#### Test 2 #####
+#  0 1 2 3 4 5 6 7
+# 0. . . . . . . .
+# 1. . . . . . . .
+# 2. . b - + . . .
+# 3. a |   | - + .
+# 4. | + - +   + .
+# 5. + - - - - + .
+# 6. . . . . . . .
+# 7. . . . . . . .
+a = Rectangle(Point(1, 3), 4, 2)
+b = Rectangle(Point(2, 2), 2, 2)
+test(a.collision(b), True)
+#### Test 3 #####
+#  0 1 2 3 4 5 6 7
+# 0. . . . . . . .
+# 1. . a - + . . .
+# 2. . | . | . . .
+# 3b - | - | - - +
+# 4| . | . | . . |
+# 5+ - | - | - - +
+# 6. . | . | . . .
+# 7. . + - + . . .
+a = Rectangle(Point(2, 1), 2, 6)
+b = Rectangle(Point(0, 3), 7, 2)
+test(a.collision(b), True)
+#### Test 4 #####
+#  0 1 2 3 4 5 6 7
+# 0. b - - - - + .
+# 1. |         | .
+# 2. |         | .
+# 3. + - - - - + .
+# 4. . . a - - - +
+# 5. . . |       |
+# 6. . . |       |
+# 7. . . + - - - +
+a = Rectangle(Point(3, 4), 5, 3)
+b = Rectangle(Point(1, 0), 4, 3)
+test(a.collision(b), False)

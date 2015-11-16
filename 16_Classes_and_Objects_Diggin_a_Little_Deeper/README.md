@@ -50,7 +50,7 @@ test(r.contains(Point(3, 4.99999)), True)
 
 test(r.contains(Point(-3, -3)), False)
 ```
-5. **[current](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/16_Classes_and_Objects_Diggin_a_Little_Deeper/Exercise_16_6_5.py)** In games, we often put a rectangular “bounding box” around our sprites. (A sprite is an
+5. **[done](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/16_Classes_and_Objects_Diggin_a_Little_Deeper/Exercise_16_6_5.py)** In games, we often put a rectangular “bounding box” around our sprites. (A sprite is an
 object that can move about in the game, as we will see shortly.) We can then do collision
 detection between, say, bombs and spaceships, by comparing whether their rectangles
 overlap anywhere.
