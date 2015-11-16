@@ -1,6 +1,5 @@
 import pygame
 
-
 def draw_board(the_board):
     """ Draw a chess board with queens, as determined by the the_board. """
 
@@ -15,12 +14,13 @@ def draw_board(the_board):
     # Create the surface of (width, height), and its window.
     surface = pygame.display.set_mode((surface_sz, surface_sz))
 
+    # Scale the queen to fit the squares.. was driving me crazy.. :P
     queen = pygame.image.load("pic/queen.png")
 
     # Use an extra offset to centre the ball in its square.
     # If the square is too small, offset becomes negative,
     #   but it will still be centered :-)
-    ball_offset = (sq_sz - queen.get_width()) // 2
+    queen_offset = (sq_sz - queen.get_width()) // 2
 
     while True:
 
@@ -41,7 +41,7 @@ def draw_board(the_board):
         # Now that squares are drawn, draw the queens.
         for (col, row) in enumerate(the_board):
             surface.blit(queen,
-                         (col * sq_sz + ball_offset, row * sq_sz + ball_offset))
+                         (col * sq_sz + queen_offset, row * sq_sz + queen_offset))
 
         pygame.display.flip()
 
