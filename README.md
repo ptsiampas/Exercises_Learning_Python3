@@ -17,9 +17,9 @@ it can be found: http://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3/in
 * ~~Chapter 12 Modules~~ 06 Nov 2015
 * ~~Chapter 13 Files~~ 07 Nov 2015
 * ~~Chapter 14 List Algorithms~~ 12 Nov 2015
-* Chapter 15 Classes and Objects - the Basics
-* Chapter 16 Classes and Objects - Digging a little deeper
-* Chapter 17 PyGame
+* ~~Chapter 15 Classes and Objects - the Basics~~ 14 Nov 2015
+* ~~Chapter 16 Classes and Objects - Digging a little deeper~~ 16 Nov 2015
+* **[Up to here] ->** Chapter 17 PyGame
 * Chapter 18 Recursion
 * Chapter 19 Exceptions
 * Chapter 20 Dictionaries
