@@ -15,8 +15,12 @@ class Card_Sprite:
 
     def darw(self, target_surface, position, card_id):
         self.target_pos = position
-        x = 65 * card_id
+        x = 68 * card_id
         y = 0
+        if 10 < card_id <= 20:
+            x = 68 * (card_id % 10)
+            y = 96
+
         size_x = 66
         size_y = 95
         target_surface.blit(self.image, self.target_pos, (x, y, size_x, size_y))
@@ -58,15 +62,15 @@ def draw_table(cards):
         surface.fill(bk_colour)
 
         (x_location, y_location) = card_start_loc
-        for x in range(5):
+        for x in cards:
             surface.fill(card_holder_colour, (x_location, y_location, card_size[0], card_size[1]))
+            card1.darw(surface, (x_location, 50), x)
             x_location += card_size[0] + 15
 
-        card1.darw(surface, (50, 50), 2)
         # Flip the surface
         pygame.display.flip()
 
     pygame.quit()
 
 
-draw_table([5, 10, 23, 51, 30])
+draw_table([0, 10, 11, 20])
