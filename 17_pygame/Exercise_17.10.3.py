@@ -13,17 +13,10 @@ class Card_Sprite:
     def update(self):
         return
 
-    def darw(self, target_surface, position, card_id):
+    def draw(self, target_surface, position, sprite_location):
         self.target_pos = position
-        x = 68 * card_id
-        y = 0
-        if 10 < card_id <= 20:
-            x = 68 * (card_id % 10)
-            y = 96
-
-        size_x = 66
-        size_y = 95
-        target_surface.blit(self.image, self.target_pos, (x, y, size_x, size_y))
+        (sprite_loc_x, sprite_y) = sprite_location
+        target_surface.blit(self.image, self.target_pos, (sprite_loc_x, sprite_y, 66, 95))
 
     def handle_click(self):
         return
@@ -40,13 +33,25 @@ def draw_table(cards):
 
     # Card holders starting point
     card_size = (66, 95)
-    card_start_loc = (50, 50)
+    card_start_loc = (10, 50)
     card_holder_colour = (255, 255, 0)
 
     # Build the deck
     full_deck_sheet = pygame.image.load("pic/CardDeck.png")
-    card1 = Card_Sprite(full_deck_sheet)
+
+    card_sprites = Card_Sprite(full_deck_sheet)
+
     deck_of_cards = []
+    for ly in range(0, 480, 96):
+        for lx in range(0, 748, 68):
+            deck_of_cards.append((lx, ly))
+            if len(deck_of_cards) >= 51:
+                break
+
+    # Shuffle the cards
+    rng = random.Random()
+    rng.shuffle(deck_of_cards)
+    cards = deck_of_cards[:5]
 
     while True:
         ev = pygame.event.poll()
@@ -62,10 +67,10 @@ def draw_table(cards):
         surface.fill(bk_colour)
 
         (x_location, y_location) = card_start_loc
-        for x in cards:
+        for the_card in cards:
             surface.fill(card_holder_colour, (x_location, y_location, card_size[0], card_size[1]))
-            card1.darw(surface, (x_location, 50), x)
-            x_location += card_size[0] + 15
+            card_sprites.draw(surface, (x_location, y_location), the_card)
+            x_location += card_size[0] + 10
 
         # Flip the surface
         pygame.display.flip()
@@ -73,4 +78,7 @@ def draw_table(cards):
     pygame.quit()
 
 
-draw_table([0, 10, 11, 20])
+items = []
+for x in range(15, 20):
+    items.append(x)
+draw_table(items)
