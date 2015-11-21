@@ -14,6 +14,11 @@
       <sourceFolder url="file://$MODULE_DIR$/12_Modules" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/13_Files" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/14_List Algorithms" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/15._Classes and Objects_Basics" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/16_Classes_and_Objects_Diggin_a_Little_Deeper" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/17_pygame" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/17_pygame/pic" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/18_Recursion" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/Introduction" />
     </content>
