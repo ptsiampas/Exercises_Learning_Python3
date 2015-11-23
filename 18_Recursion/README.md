@@ -71,3 +71,16 @@ def koch_3(t, size):
 
 ## Exercises
 1. Modify the Koch fractal program so that it draws a Koch snowflake.
+2. Draw a Cesaro torn line fractal, of the order given by the user. 
+   a. We show four different lines of orders 0,1,2,3. In this example, the angle of the tear is 10 degrees.
+   b. Four lines make a square. Use the code in part (a) to draw cesaro squares. Varying the angle gives interesting effects — experiment a bit, or perhaps let the user input the angle of the tear.
+3. A Sierpinski triangle of order 0 is an equilateral triangle. An order 1 triangle can be
+drawn by drawing 3 smaller triangles (shown slightly disconnected here, just to help our
+understanding). Higher order 2 and 3 triangles are also shown. Draw Sierpinski triangles
+of any order input by the user.
+4. Adapt the above program to change the color of its three sub-triangles at some depth
+of recursion. The illustration below shows two cases: on the left, the color is changed
+at depth 0 (the outmost level of recursion), on the right, at depth 2. If the user supplies
+a negative depth, the color never changes. (**Hint:** add a new optional parameter
+colorChangeDepth (which defaults to -1), and make this one smaller on each recursive
+subcall. Then, in the section of code before you recurse, test whether the parameter is zero, and change color.)
