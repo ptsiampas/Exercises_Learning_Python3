@@ -2,25 +2,6 @@
 # list:
 from unit_tester import test
 
-
-def count_old(obj, list):
-    counter = 0
-    first_time = True
-    for item in list:
-        if isinstance(item, type([])):
-            result = count(obj, item)
-            counter = result
-            print("List count({0},{1})={2}".format(obj, item, result))
-        else:
-            print("Not List counter={0}, obj={1}, item={2}".format(counter, obj, item))
-
-        if first_time or item == obj:
-            print("first time counter={0}, obj={1}, item={2}".format(counter, obj, item))
-            counter += 1
-            first_time = False
-    return counter
-
-
 def count(search_obj, list):
     counter = 0
 
