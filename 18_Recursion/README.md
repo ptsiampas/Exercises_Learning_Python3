@@ -84,3 +84,38 @@ at depth 0 (the outmost level of recursion), on the right, at depth 2. If the us
 a negative depth, the color never changes. (**Hint:** add a new optional parameter
 colorChangeDepth (which defaults to -1), and make this one smaller on each recursive
 subcall. Then, in the section of code before you recurse, test whether the parameter is zero, and change color.)
+5. Write a function, recursive_min, that returns the smallest value in a nested number
+list. Assume there are no empty lists or sublists:
+
+    ``` Python
+    test(recursive_min([2, 9, [1, 13], 8, 6]), 1)
+    test(recursive_min([2, [[100, 1], 90], [10, 13], 8, 6]), 1)
+    test(recursive_min([2, [[13, -7], 90], [1, 100], 8, 6]), -7)
+    test(recursive_min([[[-13, 7], 90], 2, [1, 100], 8, 6]), -13)
+    ```
+
+6. Write a function count that returns the number of occurrences of target in a nested list:
+
+    ``` python
+    test(count(2, []), 0)
+    test(count(2, [2, 9, [2, 1, 13, 2], 8, [2, 6]]), 4)
+    test(count(7, [[9, [7, 1, 13, 2], 8], [7, 6]]), 2)
+    test(count(15, [[9, [7, 1, 13, 2], 8], [2, 6]]), 0)
+    test(count(5, [[5, [5, [1, 5], 5], 5], [5, 6]]), 6)
+    test(count('a',[['this',['a',['thing','a'],'a'],'is'], ['a','easy']]), 4)
+    ```
+
+7. Write a function flatten that returns a simple list containing all the values in a nested list:
+
+    ```Python
+    test(flatten([2,9,[2,1,13,2],8,[2,6]]),[2,9,2,1,13,2,8,2,6])
+    test(flatten([[9,[7,1,13,2],8],[7,6]]),[9,7,1,13,2,8,7,6])
+    test(flatten([[9,[7,1,13,2],8],[2,6]]),[9,7,1,13,2,8,2,6])
+    test(flatten([['this',['a',['thing'],'a'],'is'],['a','easy']]),
+                   ['this','a','thing','a','is','a','easy'])
+    test(flatten([]), [])
+    ```
+
+8.Rewrite the fibonacci algorithm without using recursion. Can you find bigger terms of the sequence? 
+Can you find fib(200)?
+
