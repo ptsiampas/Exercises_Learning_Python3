@@ -13,7 +13,6 @@ def count(search_obj, list):
             # Base Case - Does not CALL it's self
             if item == search_obj:
                 counter += 1
-
     return counter
 
 
