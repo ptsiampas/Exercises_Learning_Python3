@@ -68,6 +68,14 @@ def koch_3(t, size):
         t.left(angle)
 ```
 
+__This really help cement the idea of recursion into my head:__
+Base cases and RecursionIn the base case, the routine does not call itself. But, when a routine does have to call itself in order to complete its sub-task, then that is known as the recursive case. 
+So, there are 2 types of cases when using a recursive algorithm:
+base cases and recursive cases. 
+This is very important to remember when using recursion, and when you are trying to solve a problem you should ask yourself: 
+**_“What is my base case and what is my recursive case?”._**
+
+
 
 ## Exercises
 1. Modify the Koch fractal program so that it draws a Koch snowflake.
@@ -116,6 +124,19 @@ list. Assume there are no empty lists or sublists:
     test(flatten([]), [])
     ```
 
-8.Rewrite the fibonacci algorithm without using recursion. Can you find bigger terms of the sequence? 
+8. Rewrite the fibonacci algorithm without using recursion. Can you find bigger terms of the sequence? 
 Can you find fib(200)?
+9. balh
+10. Write a program that walks a directory structure (as in the last section of this chapter), but instead of printing
+filenames, it returns a list of all the full paths of files in the directory or the subdirectories.
+(Don’t include directories in this list — just files.) For example, the output list might have elements like this:
 
+    ```python
+    ['C:\Python31\Lib\site-packages\pygame\docs\ref\mask.html',
+    'C:\Python31\Lib\site-packages\pygame\docs\ref\midi.html',
+    ...
+    'C:\Python31\Lib\site-packages\pygame\examples\aliens.py',
+    ...
+    'C:\Python31\Lib\site-packages\pygame\examples\data\boom.wav',
+    ... ]
+    ```
