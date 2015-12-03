@@ -19,10 +19,12 @@
       <sourceFolder url="file://$MODULE_DIR$/17_pygame" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/17_pygame/pic" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/18_Recursion" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/19_Exceptions" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/Introduction" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.4.2 (/usr/bin/python3.4)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="PVTNextTrain" />
   </component>
 </module>
