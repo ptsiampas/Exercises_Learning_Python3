@@ -72,7 +72,6 @@ the program when the user enters the data “ThiS is String with Upper and lower
     ```
 2. **[Completed](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/20_Dictionaries/Exercise_20.8.2.py)**
 Give the Python interpreter’s response to each of the following from a continuous interpreter session:
-
 a. Will print 35.
 
     ```python
