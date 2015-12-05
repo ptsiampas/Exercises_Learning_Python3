@@ -21,8 +21,8 @@ it can be found: http://www.ict.ru.ac.za/Resources/cspw/thinkcspy3/thinkcspy3/in
 * ~~Chapter 16 Classes and Objects - Digging a little deeper~~ 16 Nov 2015
 * ~~Chapter 17 PyGame~~ 20 Nov 2015
 * ~~Chapter 18 Recursion~~ 03 Nov 2015
-* **[Up to here] ->**Chapter 19 Exceptions
-* Chapter 20 Dictionaries
-* Chapter 21 Even more OOP
+* ~~Chapter 19 Exceptions~~ 04 Nov 2015
+* ~~Chapter 20 Dictionaries~~ 05 Nov 2015
+* **[Up to here] ->** Chapter 21 Even more OOP
 * Chapter 22 Collections of Objects
 * Chapter 23 Inheritance
