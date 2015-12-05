@@ -145,5 +145,5 @@ The first 10 lines of your output file should look something like this:
     absence           1
     absurd            2
     ```
-    How many times does the word alice occur in the book? **385**
+    How many times does the word alice occur in the book? **386**
 4. What is the longest word in Alice in Wonderland? How many characters does it have? **_multiplication_ with _14_ Char**
