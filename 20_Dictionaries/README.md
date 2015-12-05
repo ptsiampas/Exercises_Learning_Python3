@@ -72,6 +72,7 @@ the program when the user enters the data “ThiS is String with Upper and lower
     ```
 2. **[Completed](https://github.com/ptsiampas/Exercises_Learning_Python3/blob/master/20_Dictionaries/Exercise_20.8.2.py)**
 Give the Python interpreter’s response to each of the following from a continuous interpreter session:
+
 a. Will print 35.
 
     ```python
@@ -145,5 +146,5 @@ The first 10 lines of your output file should look something like this:
     absence           1
     absurd            2
     ```
-    How many times does the word alice occur in the book? **385**
+    How many times does the word alice occur in the book? **386**
 4. What is the longest word in Alice in Wonderland? How many characters does it have? **_multiplication_ with _14_ Char**
