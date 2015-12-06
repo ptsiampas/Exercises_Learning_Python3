@@ -1,4 +1,9 @@
-# 4. Rewrite increment as a method that uses our “Aha” insight.
+# 3. Overload the >operator so that instead of having to write
+#    if t1.after(t2): ...
+#    to use
+#    if t1 > t2: ...
+from unit_tester import test
+
 
 class MyTime:
     def __init__(self, hrs=0, mins=0, secs=0):
@@ -28,7 +33,7 @@ class MyTime:
     def __sub__(self, other):
         return MyTime(0, 0, self.to_seconds() - other.to_seconds())
 
-    def increment_old(self, seconds):
+    def increment(self, seconds):
         self.seconds += seconds
 
         while self.seconds >= 60:
@@ -38,12 +43,6 @@ class MyTime:
         while self.minutes >= 60:
             self.minutes -= 60
             self.hours += 1
-
-    def increment(self, seconds):
-        t2 = MyTime(0, 0, self.to_seconds() + seconds)
-        self.hours = t2.hours
-        self.minutes = t2.minutes
-        self.seconds = t2.seconds
 
     def to_seconds(self):
         """
@@ -59,7 +58,5 @@ class MyTime:
         return t1.to_seconds() <= self.to_seconds() < t2.to_seconds()
 
 
-t1 = MyTime(14, 32, 12)
-print("Current Time: {} ".format(t1), end="")
-t1.increment(500)
-print("incremented by 500 = {}".format(t1))  # 14:40:32
+test(MyTime(2, 34, 14) > MyTime(14, 32, 12), False)
+test(MyTime(14, 32, 12) > MyTime(2, 34, 14), True)
